@@ -18,26 +18,29 @@ namespace ElephantExercise
                 
                 if (int.TryParse(line, out int value))
                 {
+                    Console.WriteLine($"You pressed {value}");
                     if (value == 1)
-                    {
-                        Console.WriteLine("You pressed 1");
+                    {                       
                         Console.WriteLine("Calling lloyd.WhoAmI()");
                         lloyd.WhoAmI();
 
                     } else if (value == 2 )
-                    {
-                        Console.WriteLine("You pressed 1");
+                    {                       
                         Console.WriteLine("Calling lucinda.WhoAmI()");
                         lucinda.WhoAmI();
                     }else if (value == 3)
-                    {
-                        Console.WriteLine("You pressed 3");
+                    {                       
                         Elephant swap;
                         swap = lloyd;
                         lloyd = lucinda;
                         lucinda = swap;
                         
                         Console.WriteLine("References have been swapped");
+                    }else if (value == 4)
+                    {
+                        lloyd = lucinda;
+                        lloyd.EarSize = 4321;
+                        lloyd.WhoAmI();
                     }
 
                 }
