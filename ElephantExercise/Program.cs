@@ -41,6 +41,9 @@ namespace ElephantExercise
                         lloyd = lucinda;
                         lloyd.EarSize = 4321;
                         lloyd.WhoAmI();
+                    }else if (value == 5)
+                    {
+                        lucinda.SpeakTo(lloyd, "Hi, Lloyd!");
                     }
 
                 }
